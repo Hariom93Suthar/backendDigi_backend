@@ -27,4 +27,4 @@ const onboardingSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Onboarding', onboardingSchema);
+module.exports = mongoose.model('OnboardingData', onboardingSchema);

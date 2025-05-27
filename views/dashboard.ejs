@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <div class="w-64 bg-white shadow-md">
+      <div class="p-4 border-b text-xl font-bold text-purple-600">Brothers Digi</div>
+      <nav class="mt-4">
+        <a href="#" class="block px-6 py-3 hover:bg-gray-100">Dashboard</a>
+        <a href="/services" data-page="/services" class="block px-6 py-3 hover:bg-gray-100">Services</a>
+        <a href="#" class="block px-6 py-3 hover:bg-gray-100">Table List</a>
+        <a href="#" class="block px-6 py-3 hover:bg-gray-100">Typography</a>
+        <a href="#" class="block px-6 py-3 hover:bg-gray-100">Icons</a>
+        <a href="#" class="block px-6 py-3 hover:bg-gray-100">Maps</a>
+        <a href="#" class="block px-6 py-3 hover:bg-gray-100">Notifications</a>
+      </nav>
+    </div>
+
+   
+    <!-- <div class="flex-1 p-6 overflow-auto">
+
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold">Material Dashboard</h2>
+        <input type="text" placeholder="Search..." class="border p-2 rounded-md w-64">
+      </div> -->
+
+      <!-- Main Content -->
+<div id="main-content" class="flex-1 p-6 overflow-auto">
+  <!-- Default Dashboard Content -->
+    <div class="flex justify-between items-center mb-6">
+  <h2 class="text-2xl font-semibold">Material Dashboard</h2>
+  <br>
+  <p>Welcome to the dashboard...</p>
+  <input type="text" placeholder="Search..." class="border p-2 rounded-md w-64">
+  
+</div>
+
+
+  
+
+
+
+      <!-- Cards Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="bg-orange-500 text-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-medium">Used Space</h4>
+          <p>49/50 GB</p>
+        </div>
+        <div class="bg-green-500 text-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-medium">Revenue</h4>
+          <p>$34,245</p>
+        </div>
+        <div class="bg-red-500 text-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-medium">Fixed Issues</h4>
+          <p>75</p>
+        </div>
+        <div class="bg-blue-500 text-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-medium">Followers</h4>
+          <p>+245</p>
+        </div>
+      </div>
+
+      <!-- Graphs Placeholder Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-gray-800 font-semibold mb-2">Daily Sales</h4>
+          <div class="h-32 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">Graph Placeholder</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-gray-800 font-semibold mb-2">Email Subscriptions</h4>
+          <div class="h-32 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">Graph Placeholder</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-gray-800 font-semibold mb-2">Completed Tasks</h4>
+          <div class="h-32 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">Graph Placeholder</div>
+        </div>
+      </div>
+
+      <!-- Footer Boxes -->
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-purple-500 text-white p-4 rounded-lg shadow flex justify-between">
+          <div>
+            <h4 class="font-medium">Tasks</h4>
+            <p>BUGS • WEBSITE • SERVER</p>
+          </div>
+          <button class="bg-white text-purple-600 px-3 py-1 rounded">View</button>
+        </div>
+        <div class="bg-yellow-500 text-white p-4 rounded-lg shadow flex justify-between">
+          <div>
+            <h4 class="font-medium">Employee Stats</h4>
+            <p>New employees on 15th September, 2016</p>
+          </div>
+          <button class="bg-white text-yellow-600 px-3 py-1 rounded">View</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("a[data-page]");
+    const mainContent = document.getElementById("main-content");
+
+    links.forEach(link => {
+      link.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const page = link.getAttribute("data-page");
+
+        try {
+          const res = await fetch(page);
+          const html = await res.text();
+          mainContent.innerHTML = html;
+        } catch (err) {
+          mainContent.innerHTML = "<p class='text-red-500'>Failed to load content.</p>";
+          console.error(err);
+        }
+      });
+    });
+  });
+</script> -->
+
+
+</body>
+</html>
